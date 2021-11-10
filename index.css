@@ -17,12 +17,15 @@ body {
   text-align: right;
 }
 
+.img-1 {
+  width: 500px;
+}
+
 .images-right {
   float: right;
   display: grid;
   grid: auto;
-
-  margin-right: 24px;
+  margin-right: 10px;
 }
 
 .img-2 {
@@ -44,5 +47,9 @@ a {
 
   .images-right {
     display: none;
+  }
+
+  .contact-info {
+    font-size: 15px;
   }
 }
