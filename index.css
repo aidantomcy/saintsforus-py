@@ -1,55 +1,77 @@
+/* BASIC SETUP */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  font-family: "Poppins", arial, helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: "Poppins", arial, helvetica, sans-serif;
 }
 
 body {
-  background: #b0e0e6;
-}
-
-.title {
-  font-size: 35px;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.img-1 {
-  width: 500px;
-}
-
-.images-right {
-  float: right;
-  display: grid;
-  grid: auto;
-  margin-right: 10px;
-}
-
-.img-2 {
-  margin-top: 10px;
+    background: #b0e0e6;
+    user-select: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 30px;
-  }
+/* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
 
-  .quote {
-    font-size: 10px;
-  }
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-  .images-right {
-    display: none;
-  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-  .contact-info {
-    font-size: 15px;
-  }
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* STYLING FOR CLASSES */
+.title {
+    font-size: 35px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.img-1 {
+    width: 500px;
+}
+
+.images-right {
+    float: right;
+    display: grid;
+    grid: auto;
+    margin-right: 10px;
+}
+
+.img-2 {
+    margin-top: 10px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1017px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .quote {
+        font-size: 10px;
+    }
+
+    .images-right {
+        display: none;
+    }
+
+    .contact-info {
+        font-size: 15px;
+    }
 }
