@@ -80,17 +80,21 @@
     <div class="contact-info">
       <p>
         <br />
-        Made by-<a href="https://aidantomcy.github.io">Aidan Tomcy Champannoor</a><br />
+        Made by-<a href="https://aidantomcy.github.io"
+          >Aidan Tomcy Champannoor</a
+        ><br />
         If you have any doubts/complaints/feedback, please mail your queries to
-        aidantomcy@gmail.com <br />
+        info.saintsforus@gmail.com/aidantomcy@gmail.com <br />
+        <a href="feedback.html">Submit Feedback</a><br />
         Source-<a href="https://www.wikipedia.org/">Wikipedia</a>
       </p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      document.addEventListener("contextmenu", (event) =>
-        event.preventDefault()
-      );
+      $(document).bind("contextmenu", () => {
+        return false;
+      });
     </script>
   </body>
 </html>

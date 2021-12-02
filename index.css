@@ -57,6 +57,11 @@ a {
     margin-top: 10px;
 }
 
+.feedback-btn {
+    display: flex;
+    justify-content: center;
+}
+
 /* RESPONSIVENESS */
 @media (max-width: 1017px) {
     .title {
