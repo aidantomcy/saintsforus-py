@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from dotenv import load_dotenv
 from os import getenv
 from .views import views
