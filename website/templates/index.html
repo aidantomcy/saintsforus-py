@@ -88,7 +88,10 @@
       href="{{ url_for('static', filename='icon/manifest.json') }}"
     />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="{{ url_for('static', filename='icon/ms-icon-144x144.png') }}"
+    />
     <meta name="theme-color" content="#ffffff" />
     <title>Saints for Us</title>
   </head>
@@ -168,7 +171,7 @@
         ><br />
         If you have any doubts/complaints/feedback, please mail your queries to
         info.saintsforus@gmail.com/aidantomcy@gmail.com <br />
-        <a href="feedback.html">Submit Feedback</a><br />
+        <a href="/feedback">Submit Feedback</a><br />
         Source-<a href="https://www.wikipedia.org/">Wikipedia</a>
       </p>
     </div>
