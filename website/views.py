@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request
 from dotenv import load_dotenv
 from os import getenv
 import smtplib
