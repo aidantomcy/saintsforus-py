@@ -2,81 +2,81 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    font-family: "Poppins", arial, helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", arial, helvetica, sans-serif;
 }
 
 body {
-    background: #b0e0e6;
-    user-select: none;
+  background: #b0e0e6;
+  user-select: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+  background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* STYLING FOR CLASSES */
 .title {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .align-right {
-    text-align: right;
+  text-align: right;
 }
 
 .img-1 {
-    width: 500px;
+  width: 500px;
 }
 
 .images-right {
-    float: right;
-    display: grid;
-    grid: auto;
-    margin-right: 10px;
+  float: right;
+  display: grid;
+  grid: auto;
+  margin-right: 10px;
 }
 
 .img-2 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .feedback-btn {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* RESPONSIVENESS */
 @media (max-width: 1017px) {
-    .title {
-        font-size: 30px;
-    }
+  .title {
+    font-size: 30px;
+  }
 
-    .quote {
-        font-size: 10px;
-    }
+  .quote {
+    font-size: 10px;
+  }
 
-    .images-right {
-        display: none;
-    }
+  .images-right {
+    display: none;
+  }
 
-    .contact-info {
-        font-size: 15px;
-    }
+  .contact-info {
+    font-size: 15px;
+  }
 }
