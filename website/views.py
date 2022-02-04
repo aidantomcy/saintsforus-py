@@ -15,26 +15,27 @@ def index():
 
 @views.route("/feedback", methods=["GET", "POST"])
 def feedback():
-    name = request.form.get("name")
-    user_email = request.form.get("email")
-    message = request.form.get("message")
+    if request.method == "POST":
+        name = request.form.get("name")
+        user_email = request.form.get("email")
+        message = request.form.get("message")
 
-    sender = "info.saintsforus@gmail.com"
-    receiver = "aidantomcy@gmail.com"
-    password = getenv("EMAIL_PASSWORD")
-    subject = "New form submission in Saints for Us website"
-    body = f"""
-There is a new form submission in the website, here are the details:
+        sender = "info.saintsforus@gmail.com"
+        receiver = "aidantomcy@gmail.com"
+        password = getenv("EMAIL_PASSWORD")
+        subject = "New form submission in Saints for Us website"
+        body = f"""
+    There is a new form submission in the website, here are the details:
 
-Name: {name}
-Email: {user_email}
-Message: {message}
-"""
+    Name: {name}
+    Email: {user_email}
+    Message: {message}
+    """
 
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
 
-    server.login(sender, password)
-    server.sendmail(sender, receiver, body)
+        server.login(sender, password)
+        server.sendmail(sender, receiver, body)
 
     return render_template("feedback.html")
