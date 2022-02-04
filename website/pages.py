@@ -11,3 +11,8 @@ def stanthony():
 @pages.route("/stfrancisassisi")
 def stfrancisassisi():
     return render_template("stfrancisassisi.html")
+
+
+@pages.route("/staidanlindisfarne")
+def staidanlindisfarne():
+    return render_template("staidanlindisfarne.html")
