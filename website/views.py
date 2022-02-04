@@ -48,6 +48,7 @@ def feedback():
 
             server.login(sender, password)
             server.sendmail(sender, receiver, body)
+            flash("Thank you for your feedback!")
         else:
             flash("Invalid email", category='error')
 
