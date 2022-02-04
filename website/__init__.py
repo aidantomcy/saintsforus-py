@@ -2,6 +2,7 @@ from flask import Flask
 from dotenv import load_dotenv
 from os import getenv
 from .views import views
+from .pages import pages
 
 
 load_dotenv()
@@ -13,5 +14,6 @@ def create_app():
     app.config['SECRET_KEY'] = secret_key
 
     app.register_blueprint(views)
+    app.register_blueprint(pages)
 
     return app
