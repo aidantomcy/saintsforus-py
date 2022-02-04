@@ -11,6 +11,10 @@ body {
   user-select: none;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 a {
   text-decoration: none;
   color: #0000ee;
@@ -36,11 +40,6 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* STYLING FOR CLASSES */
-.title {
-  font-size: 35px;
 }
 
 .align-right {
@@ -70,11 +69,12 @@ a:hover {
 /* RESPONSIVENESS */
 @media (max-width: 1017px) {
   .title {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .quote {
     font-size: 10px;
+    display: none;
   }
 
   .images-right {
@@ -82,6 +82,6 @@ a:hover {
   }
 
   .contact-info {
-    font-size: 15px;
+    font-size: 10.5px;
   }
 }
