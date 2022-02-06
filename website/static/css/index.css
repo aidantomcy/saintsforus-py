@@ -67,7 +67,7 @@ a:hover {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 1017px) {
+@media (max-width: 922px) {
   .title {
     font-size: 35px;
   }
