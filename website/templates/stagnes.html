@@ -1,0 +1,266 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2200px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+{% block title %}St Agnes of Rome{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. Agnes of Rome</h1>
+        <p>(291-304)</p>
+        <p>
+          "You may stain your sword with my blood, but you will never be able to
+          profane my body, consecrated to Christ."
+        </p>
+        <p class="quote-sayer">-St. Agnes of Rome</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stagnes.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          <br />St. Agnes (291-304) was a virgin martyr, venerated as a saint in
+          the Roman Catholic Church, <br />Eastern Orthodox Church, the Anglican
+          Communion and Lutheranism. St. Agnes is one of several virgin
+          <br />martyrs commemorated by name in the Canon of the Mass. She is
+          depicted in art with a lamb, <br />evoking her name, which resembles the
+          latin word for lamb, "Agnus." She is also shown with a <br />martyr's
+          palm. St. Agnes is the patron saint of girls and chastity.
+        </p>
+
+        <h2>Biography</h2>
+        <p>
+          Substantially the circumstances of her martyrdom are believed to be
+          authentic, though the legend cannot
+          <br />be proven true, and many details of the fifth century Acts of
+          Saint Agnes are open to criticism. A church <br />was built over her
+          tomb, and her relics venerated. According to tradition, Agnes was a
+          member of the Roman <br />nobility, born in AD 291 and raised in an
+          early Christian family. She suffered martyrdom at the age of
+          <br />twelve or thirteen during the reign of the Roman emperor
+          Diocletian, on 21 January 304. A beautiful young <br />girl from a
+          wealthy family, Agnes had many suitors of high rank, and the young men,
+          slighted by her resolute <br />devotion to religious purity, submitted
+          her name to the authorities as a follower of Christianity. She was
+          <br />led out and bound to a stake, but the bundle of wood would not
+          burn, or the flames parted away from her, <br />whereupon the officer in
+          charge of the troops drew his sword and beheaded her, or, in some other
+          texts, <br />stabbed her in the throat. It is also said that her blood
+          poured to the stadium floor where other Christians <br />soaked it up
+          with cloths.
+        </p>
+
+        <h2>Veneration</h2>
+        <p>
+          Agnes was venerated as a saint at least as early as the time of St
+          Ambrose, based on an existing homily.
+          <br />She is commemorated in the Depositio Martyrum of Filocalus (354)
+          and in the early Roman Sacramentaries. <br />Saint Agnes' bones are
+          conserved beneath the high altar in the church of Sant'Agnese fuori le
+          mura in <br />Rome, built over the catacomb that housed her tomb. Her
+          skull is preserved in a separate chapel in <br />the church of
+          Sant'Agnese in Agone in Rome's Piazza Navona. Because of the legend
+          around her martyrdom, <br />Saint Agnes is patron saint of those seeking
+          chastity and purity. Since the Middle Ages, Saint Agnes has
+          <br />traditionally been depicted as a young girl with her long hair
+          down, with a lamb, the symbol of both her <br />virginal innocence and
+          her name, and a sword (together with the palm branch an attribute of her
+          martyrdom). <br />The lamb, which is agnus in the Latin language, is
+          also the linguistic link to the traditional blessing <br />of lambs
+          referred to below.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/blessedcarloacutis">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/stkuriakose">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
