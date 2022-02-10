@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/404.css') }}"
+      href="{{ url_for('static', filename='css/error.css') }}"
     />
     <link
       rel="apple-touch-icon"
@@ -101,10 +101,6 @@
     <script>
       $(document).bind("contextmenu", () => {
         return false;
-      });
-
-      $("#back").on("click", () => {
-        location.replace("index.html");
       });
     </script>
   </body>
