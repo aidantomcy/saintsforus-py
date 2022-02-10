@@ -31,3 +31,8 @@ def blessedcarloacutis():
 @pages.route("/stagnes")
 def stagnes():
     return render_template("stagnes.html")
+
+
+@pages.route("/stkuriakose")
+def stkuriakose():
+    return render_template("stkuriakose.html")
