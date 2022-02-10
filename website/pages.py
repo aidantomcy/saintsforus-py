@@ -21,3 +21,8 @@ def staidanlindisfarne():
 @pages.route("/stfrancisxavier")
 def stfrancisxavier():
     return render_template("stfrancisxavier.html")
+
+
+@pages.route("/blessedcarloacutis")
+def blessedcarloacutis():
+    return render_template("blessedcarloacutis.html")
