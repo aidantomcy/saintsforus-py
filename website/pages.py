@@ -46,3 +46,8 @@ def stjoan():
 @pages.route("/stpeter")
 def stpeter():
     return render_template("stpeter.html")
+
+
+@pages.route("/stbernadette")
+def stbernadette():
+    return render_template("stbernadette.html")
