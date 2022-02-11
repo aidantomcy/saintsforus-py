@@ -1,0 +1,348 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 3200px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}St. Joan of Arc{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. Joan of Arc</h1>
+        <p>(1412-30 May 1431)</p>
+        <p>
+          "If I am not, may God put me there; and if I am, may God so keep me."
+        </p>
+        <p class="quote-sayer">-St. Joan of Arc</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stjoan.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          <br />St. Joan of Arc (1412-30 May 1431) is considered a heroine of
+          France for her role during the <br />Lancastrian Phase of the Hundred
+          Years War and was canonized as a Catholic saint. She was born <br />to
+          Jacques d'Arc and Isabelle Romee, a peasant family, at Domremy in the
+          Vosges of northeast <br />France. Joan claimed to have received visions
+          of the Archangel Michael, St. Margaret and <br />St. Catherine of
+          Alexandria instructing her to support King Charles VII and recover
+          France from <br />English domination late in the Hundred Years War. The
+          as-yet-unanointed King Charles VII sent Joan <br />to the Siege of
+          Orleans as part of a relief army. She was canonized on 16 May 1920 by
+          Pope Benedict XV.
+        </p>
+        <h2>Birth and Historical Background</h2>
+        <p>
+          Joan of Arc was born sometime around 1412 in Domrémy, a small village in
+          the Meuse valley, which is now
+          <br />located in the Vosges department within the historical region of
+          Lorraine, France. Her parents were <br />Jacquesd'Arc and Isabelle
+          Romée. Joan had at least three brothers and a sister; all but one of the
+          brothers <br />was older. Her father was a peasant farmer of some means.
+          The family had about 50 acres (20 ha) of land, and <br />her father
+          supplemented the family income with a minor position as a village
+          official, collecting taxes and <br />heading the local watch. Joan was
+          born during the Hundred Years' War, a conflict—punctuated by numerous
+          truces <br />between the kingdoms of England and France that had begun
+          in 1337.
+        </p>
+        <h2>Early Life</h2>
+        <p>
+          It was during the time that the war began to encroach on Domrémy that
+          Joan had her first vision. Joan
+          <br />testified that when she was at the age of 13, around 1425, figures
+          she identified as Saint Michael <br />surrounded by angels appeared to
+          her in her father's garden. After the vision, she reported weeping
+          because <br />she wanted them to take her with them. Throughout her
+          life, she continued to have visions of Saint Michael, <br />as well as
+          Saint Catherine and Saint Margaret. By early 1428, around the same time
+          the English began the <br />campaign resulting in the Siege of Orléans,
+          Joan's visions told her she must leave Domrémy and "go to France"
+          <br />(i.e. the core of the kingdom still controlled by Charles'
+          faction) to help the Dauphin.
+        </p>
+        <h2>Rise</h2>
+        <p>
+          Joan's first meeting with Charles VII took place at the Royal Court in
+          the town of Chinon in late February
+          <br />or early March 1429. She was aged seventeen and he twenty-six.
+          Charles had hidden himself in the crowd among <br />members of the
+          court, but Joan quickly identified him and approached him. Joan told him
+          that she had come to <br />raise the siege of Orléans and to lead him to
+          Reims for his coronation. They also had a private exchange that
+          <br />made a strong impression on Charles, but Charles and his council
+          needed more assurance. They sent her to Poitiers <br />to be examined by
+          a council of theologians to verify her morality and ensure her
+          orthodoxy. The council declared <br />her a good Catholic and a good
+          person. The theologians at Poitiers did not render a decision on the
+          source of <br />Joan's inspiration. But they agreed that sending her to
+          Orléans could be useful to the king and would test if <br />her
+          inspiration had a divine origin.
+        </p>
+        <h2>Military Campaigns</h2>
+        <p>
+          Joan arrived at the besieged city of Orléans on 29 April 1429, meeting
+          the commander Jean d'Orléans, acting
+          <br />head of the ducal family of Orléans on behalf of his captive
+          half-brother. At this point, Orléans was not <br />completely cut off,
+          and Dunois was able to get her into the city, where her arrival was
+          greeted with great <br />enthusiasm. But Joan was not given any formal
+          command, was excluded from military councils, and was kept <br />unaware
+          of the Armagnac strategic plans for relieving Orléans. The appearance of
+          Joan of Arc at Orléans <br />coincided with a change in the pattern of
+          the siege. The last attempt that had been made by the defenders to
+          <br />lift the siege had been during the previous January, and this
+          attempt had ended in defeat. Within days of <br />her arrival, the
+          Armagnacs returned to the offensive. On 4 May, the Armagnacs attacked
+          the outlying fortress of <br />Saint Loup (bastille de Saint-Loup). She
+          arrived just as the Armagnac soldiers were retreating after a failed
+          <br />attempt. Her sudden appearance caused the soldiers to give out a
+          cheer and engage in another assault, which took <br />the fortress.
+        </p>
+        <h2>Capture</h2>
+        <p>
+          Before the attack on Paris, Charles had negotiated a four-month truce
+          with the Burgundians and it had been
+          <br />extended until Easter 1430. Because of this truce, there was
+          little for Joan to do between January and March, <br />1430. During this
+          time, a letter recorded for Joan by her scribe was sent to the Hussites,
+          a heterodox group <br />in the Kingdom of Bohemia that had broken with
+          the Roman Catholic Church and had defeated several previous
+          <br />crusades sent against them. In the letter, Joan threatened to
+          break off her war with the English and attack <br />the Hussites if they
+          did not return to orthodox Catholicism. On 23 May 1430, Joan accompanied
+          an Armagnac <br />force which sortied from the city in an attempt to
+          attack the Burgundian camp at Margny, northeast of <br />Compiegne. The
+          force was defeated and Joan was captured. She agreed to surrender to a
+          pro-Burgundian nobleman <br />named Lyonnel de Wandomme, a member of
+          Jean de Luxembourg's contingent.
+        </p>
+        <h2>Execution</h2>
+        <p>
+          On 30 May 1431, Joan was executed at the age of about nineteen years
+          old. In the morning, she was allowed
+          <br />to receive the sacraments despite having been excommunicated.
+          Afterwards, she was directly taken to Rouen's <br />Vieux-Marché (Old
+          Marketplace), where she was publicly read her sentence of condemnation.
+          At this point, <br />she should have been turned over to the appropriate
+          authority, the bailiff of Rouen, for secular sentencing <br />but she
+          was not. Instead, she was delivered directly to the English and tied to
+          a tall plastered pillar for <br />execution by burning. She requested to
+          view a cross as she died. She was given a cross fashioned from a stick
+          <br />by an English soldier, which she kissed and placed next to her
+          chest. A processional crucifix was fetched from <br />the church of
+          Saint-Saveur. She embraced it before her hands were bound, and Friar
+          Isambart de la Pierre held <br />it before her eyes during her
+          execution. After she died, the English raked back the coals to expose
+          her charred <br />body so that no one could claim she had escaped alive.
+          They then cast her remains into the Seine River.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/stanthony">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/staidanlindisfarne">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
