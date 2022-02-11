@@ -36,3 +36,8 @@ def stagnes():
 @pages.route("/stkuriakose")
 def stkuriakose():
     return render_template("stkuriakose.html")
+
+
+@pages.route("/stjoan")
+def stjoan():
+    return render_template("stjoan.html")
