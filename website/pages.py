@@ -41,3 +41,8 @@ def stkuriakose():
 @pages.route("/stjoan")
 def stjoan():
     return render_template("stjoan.html")
+
+
+@pages.route("/stpeter")
+def stpeter():
+    return render_template("stpeter.html")
