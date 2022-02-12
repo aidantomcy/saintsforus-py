@@ -51,3 +51,8 @@ def stpeter():
 @pages.route("/stbernadette")
 def stbernadette():
     return render_template("stbernadette.html")
+
+
+@pages.route("/stjohnbaptist")
+def stjohnbaptist():
+    return render_template("stjohnbaptist.html")
