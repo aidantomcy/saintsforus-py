@@ -1,301 +1,307 @@
-{% extends "saint.html" %} {% block css %}
-<style>
-  /* BASIC SETUP */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    font-family: "Poppins", arial, helvetica, sans-serif;
-  }
+{% extends "saint.html" %}
 
-  body {
-    user-select: none;
-    background: #b0e0e6;
-  }
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
 
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
 
-  a {
-    text-decoration: none;
-  }
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-  /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
 
-  /* CONTAINER STYLING */
-  .container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    height: 2600px;
-    background: #ccc;
-  }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
-  .img {
-    width: 1200px;
-  }
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2600px;
+      background: #ccc;
+    }
 
-  /* HEADER STYLING */
-  .header {
-    width: 1200px;
-    height: 250px;
-    background: #892626;
-    color: white;
-  }
+    .img {
+      width: 1200px;
+    }
 
-  .header h1 {
-    font-family: "Dancing Script", cursive;
-    font-size: 60px;
-    padding-top: 10px;
-  }
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
 
-  .header p {
-    font-size: 19px;
-  }
-
-  .quote-sayer {
-    text-align: right;
-    padding-right: 10px;
-  }
-
-  /* TEXT DIV STYLING */
-
-  .text {
-    margin-left: 30px;
-  }
-
-  .text p {
-    font-size: 17px;
-  }
-
-  /* TEXT AND IMAGES CONTAINER STYLING */
-  .content {
-    width: 1200px;
-    height: 2150px;
-  }
-
-  /* STYLING FOR LINKS AT BOTTOM OF PAGE */
-  .bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .btn h2 {
-    font-size: 20px;
-  }
-
-  .btn {
-    margin-top: 30px;
-    padding: 1rem 0;
-    width: 250px;
-    height: 100px;
-    text-align: center;
-    border: 0.1rem solid #56a5eb;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: #56a5eb;
-    background-color: white;
-  }
-
-  .btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-  }
-
-  .btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-  }
-
-  .prev-next {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* RESPONSIVENESS FOR MOBILE DEVICES */
-  @media (max-width: 500px) {
     .header h1 {
-      font-size: 40px;
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
     }
 
     .header p {
-      font-size: 10px !important;
+      font-size: 19px;
     }
 
-    .text h2 {
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
       font-size: 20px;
     }
 
-    .text p {
-      font-size: 6.8px !important;
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
     }
 
-    .img {
-      display: none;
-    }
-  }
-
-  /* RESPONSIVENESS FOR TABLETS AND IPADS */
-  @media (max-width: 950px) {
-    .container {
-      width: 768px;
-      height: 2400px;
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
     }
 
-    .header {
-      width: 755px;
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
     }
 
-    .img {
-      width: 750px;
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .text p {
-      font-size: 12px;
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
     }
-  }
-</style>
-{% endblock %} {% block title %}St. Joseph{% endblock %} {% block content %}
-<div class="container">
-  <div class="header">
-    <div class="text">
-      <h1>St. Joseph</h1>
-      <p>(100 BCE-1 AD)</p>
-      <p>
-        "We are born to love, we live to love and we will die to love still
-        more."
-      </p>
-      <p class="quote-sayer">-St. Joseph</p>
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}St. Joseph{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. Joseph</h1>
+        <p>(100 BCE-1 AD)</p>
+        <p>
+          "We are born to love, we live to love and we will die to love still
+          more."
+        </p>
+        <p class="quote-sayer">-St. Joseph</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stjoseph.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          St. Joseph (100 BCE-1 AD) is a figure in the Canonical Gospels who was
+          married to Mary, Jesus' mother,
+          <br />and was Jesus' legal father. The Gospels name brothers of Jesus,
+          but the Gospel of James, an apocryphal <br />work of the late 2nd
+          century, explained that they were the sons of Joseph from an earlier
+          marriage. This <br />position is still held in Orthodox Churches, but in
+          the Western Church it was dropped in favour of St. <br />Jerome's
+          argument that Joseph, like Mary, must have been a lifelong virgin and
+          that the "brothers" must <br />have been his cousins. Perspectives on
+          Joseph as a historical figure are distinguished from a theological
+          <br />reading of the Gospel texts.
+        </p>
+        <h2>In the New Testament</h2>
+        <p>
+          The epistles of Paul are the oldest extant Christian writings. These
+          mention Jesus' mother (without
+          <br />naming her), but do not refer to his father. The Gospel of Mark,
+          believed to be the first gospel to <br />be written and with a date
+          about two decades after Paul, also does not mention Jesus' father. The
+          <br />first appearance of Joseph is in the gospels of Matthew and Luke,
+          often dated from around 80-90 AD. <br />Each contains a genealogy of
+          Jesus showing ancestry from King David, but through different sons;
+          Matthew <br />follows the major royal line from Solomon, while Luke
+          traces another line back to Nathan, another son <br />of David and
+          Bathsheba. Consequently, all the names between David and Joseph are
+          different. Like the <br />two differing genealogies, the infancy
+          narratives appear only in Matthew and Luke and take different
+          <br />approaches to reconciling the requirement that the Messiah be born
+          in Bethlehem with the tradition that <br />Jesus in fact came from
+          Nazareth.
+        </p>
+        <h2>Birth of Jesus</h2>
+        <p>
+          According to the author of the gospel according to Luke, a decree of the
+          Roman Emperor Augustus required
+          <br />that Joseph return to his hometown of Bethlehem to register for a
+          Roman census; see Census of Quirinius. <br />While he was there with
+          Mary, she gave birth to Jesus; but because there was no place for them
+          in the inn, <br />she used a manger as a cradle. After eight days, he
+          was circumcised according to Jewish law and named "Jesus
+          <br />(Yeshu'a), which means "Yahweh is salvation". After Mary continued
+          in the "blood of her purifying" another <br />33 days, for a total of 40
+          days, she brought her burnt offering and sin offering to the Temple in
+          Jerusalem <br />[Luke 2:22] so the priest could make atonement for
+          her.[Leviticus 12:1-8] They also presented Jesus - "As it <br />is
+          written in the law of the Lord, Every male that openeth the womb shall
+          be called holy to the Lord" (Luke <br />2:23 other verses). After the
+          prophecies of Simeon and the prophetess Anna in Luke 2:25-38, the family
+          "returned <br />into Galilee, to their own city Nazareth".
+        </p>
+        <h2>Death</h2>
+        <p>
+          The New Testament has no mention of Joseph's death, but he is never
+          mentioned after Jesus's childhood,
+          <br />and Mary is always presented as by herself, often dressed as a
+          widow, in other texts and art covering <br />the period of the ministry
+          and passion of Jesus. By contrast, the apocryphal History of Joseph the
+          <br />Carpenter, from the 5th or 6th century, has a long account of
+          Joseph's peaceful death, at the age of <br />111, in the presence of
+          Jesus (aged about 19), Mary and angels. This scene starts to appear in
+          art in <br />the 17th century.
+        </p>
+        <h2>Later apocryphal writings</h2>
+        <p>
+          The canonical gospels created a problem: they stated clearly that Mary
+          was a virgin when she conceived
+          <br />Jesus, and that Joseph was not his father; yet Joseph's paternity
+          was essential to establish Jesus' <br />Davidic descent. The theological
+          situation was complicated by the gospel references to Jesus' "brothers
+          <br />and sisters" (repeated in Paul, where James is called the "brother
+          of the Lord"), and by the fact that <br />Jesus was described
+          unambiguously by John and Matthew as "Joseph's son" and "the carpenter's
+          son". From <br />the 2nd century to the 5th writers tried to explain how
+          Jesus could be simultaneously the "son of God" <br />and the "son of
+          Joseph".
+        </p>
+      </div>
     </div>
   </div>
-  <div class="content">
-    <div class="image">
-      <img
-        class="img"
-        src="{{ url_for('static', filename='img/stjoseph.jpg') }}"
-        alt=""
-      />
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/mothermary">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/motherteresa">
+        <h2>Next</h2>
+      </a>
     </div>
-    <div class="text">
-      <p>
-        St. Joseph (100 BCE-1 AD) is a figure in the Canonical Gospels who was
-        married to Mary, Jesus' mother,
-        <br />and was Jesus' legal father. The Gospels name brothers of Jesus,
-        but the Gospel of James, an apocryphal <br />work of the late 2nd
-        century, explained that they were the sons of Joseph from an earlier
-        marriage. This <br />position is still held in Orthodox Churches, but in
-        the Western Church it was dropped in favour of St. <br />Jerome's
-        argument that Joseph, like Mary, must have been a lifelong virgin and
-        that the "brothers" must <br />have been his cousins. Perspectives on
-        Joseph as a historical figure are distinguished from a theological
-        <br />reading of the Gospel texts.
-      </p>
-      <h2>In the New Testament</h2>
-      <p>
-        The epistles of Paul are the oldest extant Christian writings. These
-        mention Jesus' mother (without
-        <br />naming her), but do not refer to his father. The Gospel of Mark,
-        believed to be the first gospel to <br />be written and with a date
-        about two decades after Paul, also does not mention Jesus' father. The
-        <br />first appearance of Joseph is in the gospels of Matthew and Luke,
-        often dated from around 80-90 AD. <br />Each contains a genealogy of
-        Jesus showing ancestry from King David, but through different sons;
-        Matthew <br />follows the major royal line from Solomon, while Luke
-        traces another line back to Nathan, another son <br />of David and
-        Bathsheba. Consequently, all the names between David and Joseph are
-        different. Like the <br />two differing genealogies, the infancy
-        narratives appear only in Matthew and Luke and take different
-        <br />approaches to reconciling the requirement that the Messiah be born
-        in Bethlehem with the tradition that <br />Jesus in fact came from
-        Nazareth.
-      </p>
-      <h2>Birth of Jesus</h2>
-      <p>
-        According to the author of the gospel according to Luke, a decree of the
-        Roman Emperor Augustus required
-        <br />that Joseph return to his hometown of Bethlehem to register for a
-        Roman census; see Census of Quirinius. <br />While he was there with
-        Mary, she gave birth to Jesus; but because there was no place for them
-        in the inn, <br />she used a manger as a cradle. After eight days, he
-        was circumcised according to Jewish law and named "Jesus
-        <br />(Yeshu'a), which means "Yahweh is salvation". After Mary continued
-        in the "blood of her purifying" another <br />33 days, for a total of 40
-        days, she brought her burnt offering and sin offering to the Temple in
-        Jerusalem <br />[Luke 2:22] so the priest could make atonement for
-        her.[Leviticus 12:1-8] They also presented Jesus - "As it <br />is
-        written in the law of the Lord, Every male that openeth the womb shall
-        be called holy to the Lord" (Luke <br />2:23 other verses). After the
-        prophecies of Simeon and the prophetess Anna in Luke 2:25-38, the family
-        "returned <br />into Galilee, to their own city Nazareth".
-      </p>
-      <h2>Death</h2>
-      <p>
-        The New Testament has no mention of Joseph's death, but he is never
-        mentioned after Jesus's childhood,
-        <br />and Mary is always presented as by herself, often dressed as a
-        widow, in other texts and art covering <br />the period of the ministry
-        and passion of Jesus. By contrast, the apocryphal History of Joseph the
-        <br />Carpenter, from the 5th or 6th century, has a long account of
-        Joseph's peaceful death, at the age of <br />111, in the presence of
-        Jesus (aged about 19), Mary and angels. This scene starts to appear in
-        art in <br />the 17th century.
-      </p>
-      <h2>Later apocryphal writings</h2>
-      <p>
-        The canonical gospels created a problem: they stated clearly that Mary
-        was a virgin when she conceived
-        <br />Jesus, and that Joseph was not his father; yet Joseph's paternity
-        was essential to establish Jesus' <br />Davidic descent. The theological
-        situation was complicated by the gospel references to Jesus' "brothers
-        <br />and sisters" (repeated in Paul, where James is called the "brother
-        of the Lord"), and by the fact that <br />Jesus was described
-        unambiguously by John and Matthew as "Joseph's son" and "the carpenter's
-        son". From <br />the 2nd century to the 5th writers tried to explain how
-        Jesus could be simultaneously the "son of God" <br />and the "son of
-        Joseph".
-      </p>
-    </div>
-  </div>
-</div>
-<div class="bottom-links">
-  <div class="prev-next">
-    <a class="btn" href="/mothermary">
-      <h2>Prev.</h2>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
     </a>
-    &nbsp;&nbsp;&nbsp;
-    <a class="btn" href="/motherteresa">
-      <h2>Next</h2>
-    </a>
   </div>
-  <a class="btn" href="/">
-    <h2>Back to Home Page</h2>
-  </a>
-</div>
 {% endblock %}
