@@ -1,0 +1,316 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2700px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}St. Thomas{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. Thomas</h1>
+        <p>(1st century AD-21 December AD 72)</p>
+        <p>
+          "He who is humble easily obeys everyone, fears to offend anyone, is at
+          peace with anyone, is kind to all."
+        </p>
+        <p class="quote-sayer">-St. Thomas</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stthomas.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          St. Thomas (1st century AD-21 December AD 72) was one of the Twelve
+          Apostles of Jesus according to the
+          <br />New Testament. Thomas is commonly known as "Doubting Thomas"
+          because he doubted Jesus' ressurection when <br />first told of it.
+          Later, he confessed his faith, "My Lord and my God," on seeing Jesus'
+          crucifixion wounds. <br />According to traditional accounts of the Saint
+          Thomas Christians of modern-day Kerala in India, Thomas is
+          <br />believed to have travelled outside the Roman Empire to preach the
+          Gospel, going as far as the Malabar Coast <br />which is in modern-day
+          Kerala. According to their tradition, Thomas reached Muziris (modern-day
+          North-Paravur <br />and and Kodungalloor in Kerala) in AD 52. In 1258,
+          some of the relics were brought to Ortona, in Abbruzo, <br />Italy,
+          where they have been held in the Church of Saint Thomas the Apostle. He
+          is often regarded as the patron <br />saint of India.
+        </p>
+        <h2>Gospel of John</h2>
+        <p>
+          Thomas first speaks in the Gospel of John. In John 11:16, when Lazarus
+          has recently died, and the
+          <br />apostles do not wish to go back to Judea, Thomas says: "Let us
+          also go, that we may die with him." <br />Thomas speaks again in John
+          14:5. There, Jesus had just explained that he was going away to prepare
+          <br />a heavenly home for his followers, and that one day they would
+          join him there. Thomas reacted by saying, <br />"Lord, we know not thou
+          goest; and how can we know the way?" John 20:24-29 tells how doubting
+          Thomas was <br />skeptical at first when he heard that Jesus had risen
+          from the dead and appeared to the other apostles, <br />saying, "Except
+          I shall see on his hands the print of the nails, and put my finger into
+          the print of <br />the nails, and thrust my hand into his side, I will
+          not believe." But when Jesus appeared later and <br />invited Thomas to
+          touch his wounds and behold him, Thomas showed his belief by saying, "My
+          Lord and my <br />God". Jesus then said, "Thomas, because thou hast seen
+          me, thou hast believed: blessed <em>[are]</em> they <br />that have not
+          seen, and <em>[yet]</em> have believed."
+        </p>
+        <h2>Feast days</h2>
+        <p>
+          When the feast of Saint Thomas was inserted in the Roman calendar in the
+          9th century, it was assigned to
+          <br />21 December. The Martyrology of St. Jerome mentioned the apostle
+          on 3 July, the date to which the Roman <br />celebration was transferred
+          in 1969, so that it would no longer interfere with the major ferial days
+          of <br />Advent. Traditionalist Roman Catholics (who follow the General
+          Roman Calendar of 1960 or earlier) and many <br />Anglicans (including
+          members of the Episcopal Church as well as members of the Church of
+          England and the <br />Lutheran Church, who worship according to the 1662
+          edition of the Book of Common Prayer), still celebrate <br />his feast
+          day on 21 December. However, most modern liturgical calendars (including
+          the Common Worship <br />calendar of the Church of England) prefer 3
+          July, Thomas is remembered in the Church of England with a
+          <br />Festival.
+        </p>
+        <h2>Mission in India</h2>
+        <p>
+          According to traditional accounts of the Saint Thomas Christians of
+          India, the Apostle Thomas landed
+          <br />in Muziris (Cranganore) on the Kerala coast in AD 52 and was
+          martyred in Mylapore, near Madras in AD 72. <br />The port was destroyed
+          in 1341 by a massive flood that realigned the coasts. He is believed by
+          the Saint <br />Thomas Christian tradition to have established seven
+          churches (communities) in Kerala. These churches are <br />at
+          Kodungallur, Palayoor, Kottakkavu (Paravur), Kokkamangalam, Niranam,
+          Nilackal (Chayal), Kollam, and <br />Thiruvithamcode. Thomas baptized
+          several families, namely Pakalomattom, Sankarapuri, Kalli, Kaliyankal
+          etc. <br />Other families claim to have origins almost as far back as
+          these, and the religious historian Robert Eric <br />Frykenberg notes
+          that: "Whatever dubious historicity may be attached to such local
+          traditions, there can be <br />little doubt as to their great antiquity
+          or to their great appeal in the popular imagination."
+        </p>
+        <h2>Death</h2>
+        <p>
+          According to Syrian Christian tradition, Thomas was killed at St. Thomas
+          Mount in Chennai on 3 July in
+          <br />AD 72, he was castrated, and his body was interred in Mylapore.
+          Ephrem the Syrian states that the Apostle <br />was killed in India, and
+          that his relics were taken then to Edessa. This is the earliest known
+          record of <br />his death. The records of Barbosa from the early 16th
+          century record that the tomb was then maintained by <br />a Muslim who
+          kept a lamp burning there. The San Thome Basilica Mylapore, Chennai,
+          Tamil Nadu, India presently <br />located at the tomb was first built in
+          the 16th century by the Portuguese and rebuilt in the 19th century.
+          <br />St. Thomas Mount has been a revered site by Muslims and Christians
+          since at least the 16th century.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/motherteresa">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/stsebastian">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
