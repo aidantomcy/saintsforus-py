@@ -56,3 +56,8 @@ def stbernadette():
 @pages.route("/stjohnbaptist")
 def stjohnbaptist():
     return render_template("stjohnbaptist.html")
+
+
+@pages.route("/mothermary")
+def mothermary():
+    return render_template("mothermary.html")
