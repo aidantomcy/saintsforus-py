@@ -1,0 +1,314 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2700px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}Mother Mary{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>Mother Mary</h1>
+        <p>(8 September 18 BC-33 AD)</p>
+        <p>
+          "Behold I am the handmaid of the Lord, let it be to me, according to
+          your word."
+        </p>
+        <p class="quote-sayer">-Mother Mary</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/mothermary.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          Mother Mary (8 September 18 BC-33 AD) was a first-century Galilean
+          Jewish woman of Nazareth, the wife
+          <br />of Joseph and the mother of Lord Jesus Christ according to the
+          Canonical Gospels and the Quran. The <br />Gospels of Matthew and Luke
+          in the New Testament and the Quran describe Mary as a virgin. In Matthew
+          <br />and Luke, she is betrothed to Joseph. According to Christian
+          theology, she conceived Jesus through the <br />Holy Spirit while still
+          a virgin. She accompanied Joseph to Bethlehem, where Jesus was born.
+          Catholic <br />and Eastern Christian teachings claim that at the end of
+          her earthly life, God raised her body directly <br />into heaven; this
+          is known in the Christian West as the Assumption of Mary.
+        </p>
+        <h2>Names and titles</h2>
+        <p>
+          In Christianity, Mary is commonly referred to as the Virgin Mary, in
+          accordance with the belief that he
+          <br />Holy Spirit impregnated her, thereby conceiving her first-born son
+          Jesus miraculously. The word "until" <br />has inspired considerable
+          analysis on whether Joseph and Mary produced siblings after the birth of
+          Jesus <br />or not. Among her many other names and titles are the
+          Blessed Virgin Mary (often abbreviated to "BVM", or <br />"BMV" after
+          the Latin "Beata Maria Virgo"), Saint Mary (occasionally), the Mother of
+          God (primarily in <br />Western Christianity), the Theotokos (primarily
+          in Eastern Christianity), Our Lady (Medieval Italian: Madonna),
+          <br />and Queen of Heaven (Regina caeli; see also here), although the
+          title "queen of heaven" was for centuries <br />before used as an
+          epithet for a number of ancient sky-goddesses, such as Nin-anna,
+          Astarte, Ishtar and <br />Astoreth, the Canaanite sky-goddess worshipped
+          during the Hebrew prophet Jeremiah's lifetime.
+        </p>
+        <h2>Birth of Jesus</h2>
+        <p>
+          According to the author of the gospel according to Luke, a decree of the
+          Roman Emperor Augustus required
+          <br />that Joseph return to his hometown of Bethlehem to register for a
+          Roman census; see Census of Quirinius. <br />While he was there with
+          Mary, she gave birth to Jesus; but because there was no place for them
+          in the inn, <br />she used a manger as a cradle. After eight days, he
+          was circumcised according to Jewish law and named "Jesus
+          <br />(Yeshu'a), which means "Yahweh is salvation". After Mary continued
+          in the "blood of her purifying" another <br />33 days, for a total of 40
+          days, she brought her burnt offering and sin offering to the Temple in
+          Jerusalem <br />[Luke 2:22] so the priest could make atonement for
+          her.[Leviticus 12:1-8] They also presented Jesus - "As it <br />is
+          written in the law of the Lord, Every male that openeth the womb shall
+          be called holy to the Lord" (Luke <br />2:23 other verses). After the
+          prophecies of Simeon and the prophetess Anna in Luke 2:25-38, the family
+          "returned <br />into Galilee, to their own city Nazareth".
+        </p>
+        <h2>In the life of Jesus</h2>
+        <p>
+          Mary was present when, at her suggestion, Jesus worked his first miracle
+          during a wedding at Cana by
+          <br />turning water into wine. [Jn 2:1-11] Subsequently, there are
+          events when Mary is present along with James <br />Joseph, Simon, and
+          Judas, called Jesus' brothers, and unnamed sisters. Following Jerome,
+          the Church Fathers <br />interpreted the words translated as "brother"
+          and "sister" as referring to close relatives. The hagiography <br />of
+          Mary and the Holy Family can be contrasted with other material in the
+          Gospels. These references include <br />an incident which can be
+          interpreted as Jesus rejecting his family in the New Testament: "And his
+          mother and <br />his brothers arrived, and standing outside, they sent
+          in a message asking for him […] And looking at those who <br />sat in a
+          circle around him, Jesus said, 'These are my mother and my brothers.
+          Whoever does the will of God is <br />my brother, and sister, and
+          mother'."
+        </p>
+        <h2>Feasts</h2>
+        <p>
+          The earliest feasts that relate to Mary grew out of the cycle of feasts
+          that celebrated the Nativity of
+          <br />Jesus. Given that according to the Gospel of Luke (Luke 2:22-40),
+          40 days after the birth of Jesus, along <br />with the Presentation of
+          Jesus at the Temple Mary was purified according to Jewish customs, the
+          Feast of <br />the Purification began to be celebrated by the 5th
+          century, and became the "Feast of Simeon" in Byzantium. <br />In the 7th
+          and 8th centuries, four more Marian feasts were established in Eastern
+          Christianity. In the West, <br />a feast dedicated to Mary, just before
+          Christmas was celebrated in the Churches of Milan and Ravenna in Italy
+          <br />in the 7th century. The four Roman Marian feasts of Purification,
+          Annunciation, Assumption and Nativity of Mary <br />were gradually and
+          sporadically introduced into England by the 11th century.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/stjohnbaptist">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/stjoseph">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
