@@ -15,5 +15,5 @@ while the pages.py contains the routes for all the saints.
 
 <p align="center">
     <img src="img1.png">
-    <img src="img3.png">
+    <img src="img2.png">
 </p>
