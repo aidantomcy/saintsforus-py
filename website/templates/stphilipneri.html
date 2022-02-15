@@ -1,0 +1,311 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2800px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}St. Philip Neri{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. Philip Neri</h1>
+        <p>(22 July 1515-26 May 1595)</p>
+        <p>"A joyful heart is more easily made perfect than a downcast one."</p>
+        <p class="quote-sayer">-St. Philip Neri</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stphilipneri.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          St. Philip Neri (22 July 1515-26 May 1595), known as the Second Apostle
+          of Rome, after St. Peter, was
+          <br />an Italian priest noted for founding a society of secular clergy
+          called the Congregation of the Oratory. <br />Philip was the son of
+          Francesco di Neri, a lawyer, and his wife Lucrezia da Mosciano, whose
+          family were <br />nobility in the service of the state. He was brought
+          up with great care and received his early teaching <br />from the friars
+          at San Marco, the famous Dominican monastery in Florence. He was
+          accustomed in later life <br />to ascribe most of his progress to the
+          teaching of two of them - Zenobio de'Medici and Servanzio Mini. At
+          <br />the age of 18, Philip was sent to his uncle, Romolo, a wealthy
+          merchant at San Germano, a then Neapolitan <br />town near the base of
+          Monte Cassino, to assist him in his business and with the hope that he
+          might inherit <br />his uncle's fortune. He gained Romolo's confidence
+          and affection, but soon after coming to San Germano, <br />Philip had a
+          religious conversion.
+        </p>
+        <h2>Mission work</h2>
+        <p>
+          After arriving in Rome, Philip became a tutor in the house of a
+          Florentine aristocrat named Galeotto Caccia.
+          <br />After two years he began to pursue his own studies (for a period
+          of three years) under the guidance of the <br />Augustinians. Following
+          this, he began those labours amongst the sick and poor which, in later
+          life, gained <br />him the title of "Apostle of Rome". He also
+          ministered to the prostitutes of the city. In 1538 he entered into
+          <br />the home mission work for which he became famous, traveling
+          throughout the city, seeking opportunities of <br />entering into
+          conversation with people, and of leading them to consider the topics he
+          set before them. For <br />seventeen years Philip lived as a layman in
+          Rome, probably without thinking of becoming a priest. Around 1544,
+          <br />he made the acquaintance of Ignatius of Loyola. Many of Philip's
+          disciples found their vocations in the infant <br />Society of Jesus.
+        </p>
+        <h2>Confraternity of the Holy Trinity</h2>
+        <p>
+          In 1548, together with his confessor, Persiano Rossa, Philip founded the
+          Confraternity of the Most Holy
+          <br />Trinity of Pilgrims and Convalescents (Italian:
+          <em>Santissima Trinita de' Pellegrini e de' Convalescenti</em>),
+          <br />whose primary object was to minister to the needs of the thousands
+          of poor pilgrims who flocked to Rome, <br />especially in jubilee years,
+          and also to relieve the patients discharged from hospitals but who were
+          still <br />too weak for labour. Members met for prayer at the Church of
+          San Salvatore in Campo where the devotion of <br />the Forty Hours of
+          Exposition of the Blessed Sacrament was first introduced into Rome.
+        </p>
+        <h2>Personal character</h2>
+        <p>
+          Philip possessed a playful sense of humour, combined with a shrewd wit.
+          He considered a cheerful temper
+          <br />to be more Christian than a melancholy one, and carried this
+          spirit into his whole life: "A joyful heart <br />is more easily made
+          perfect than a downcast one." This was the secret of Neri's popularity
+          and of his <br />place in the folklore of the Roman poor. Many miracles
+          were attributed to him. When his body was examined <br />after death, it
+          was found that two of his ribs had been broken, which was attributed at
+          the time to the <br />expansion of his heart while fervently praying in
+          the catacombs about the year 1545. Benedict XIV, who <br />reorganised
+          the rules for canonization, decided that Philip's enlarged heart was
+          caused by an aneurism. <br />Ponnelle and Bordet, in their 1932
+          biography
+          <em>St. Philip Neri and the Roman Society of His Times</em> (1515-1595),
+          <br />conclude that it was partly natural and partly supernatural. What
+          is certain is that Philip himself and his <br />penitents associated it
+          with divine love.
+        </p>
+        <h2>Death and veneration</h2>
+        <p>
+          Philip Neri died around the end of the day on 25 May 1595, the Feast of
+          Corpus Christi that year, after
+          <br />having spent the day hearing confessions and receiving visitors.
+          About midnight he began hemorrhaging, <br />and Baronius read the
+          commendatory prayers over him. Baronius asked that he bless his
+          spiritual sons before <br />dying and, though he could no longer speak,
+          he blessed them with the sign of the cross and died. Philip Neri
+          <br />was beatified by Paul V in 1615 and canonized by Pope Gregory XV
+          in 1622. His memorial is celebrated on 26 May. <br />His body is
+          venerated in the Chiesa Nuova ("New Church") in Rome. Philip Neri is one
+          of the influential figures <br />of the Counter-Reformation, and noted
+          for converting to personal holiness many of the influential people
+          within <br />the Church itself.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/stvianney">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/stphilip">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
