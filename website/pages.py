@@ -101,3 +101,8 @@ def stgeorge():
 @pages.route("/stpaul")
 def stpaul():
     return render_template("stpaul.html")
+
+
+@pages.route("/stvianney")
+def stvianney():
+    return render_template("stvianney.html")
