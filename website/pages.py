@@ -96,3 +96,8 @@ def stclareassisi():
 @pages.route("/stgeorge")
 def stgeorge():
     return render_template("stgeorge.html")
+
+
+@pages.route("/stpaul")
+def stpaul():
+    return render_template("stpaul.html")
