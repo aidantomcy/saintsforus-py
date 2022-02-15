@@ -131,3 +131,8 @@ def sttherese():
 @pages.route("/stnicholas")
 def stnicholas():
     return render_template("stnicholas.html")
+
+
+@pages.route("/stfrancisdesales")
+def stfrancisdesales():
+    return render_template("stfrancisdesales.html")
