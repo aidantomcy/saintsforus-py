@@ -1,0 +1,328 @@
+{% extends "saint.html" %}
+
+{% block css %}
+  <style>
+    /* BASIC SETUP */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      font-family: "Poppins", arial, helvetica, sans-serif;
+    }
+
+    body {
+      user-select: none;
+      background: #b0e0e6;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* SCROLLBAR CODE TAKEN FROM W3SCHOOLS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* CONTAINER STYLING */
+    .container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      height: 2800px;
+      background: #ccc;
+    }
+
+    .img {
+      width: 1200px;
+    }
+
+    /* HEADER STYLING */
+    .header {
+      width: 1200px;
+      height: 250px;
+      background: #892626;
+      color: white;
+    }
+
+    .header h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 60px;
+      padding-top: 10px;
+    }
+
+    .header p {
+      font-size: 19px;
+    }
+
+    .quote-sayer {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    /* TEXT DIV STYLING */
+
+    .text {
+      margin-left: 30px;
+    }
+
+    .text p {
+      font-size: 17px;
+    }
+
+    /* TEXT AND IMAGES CONTAINER STYLING */
+    .content {
+      width: 1200px;
+      height: 2150px;
+    }
+
+    /* STYLING FOR LINKS AT BOTTOM OF PAGE */
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .btn h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 1rem 0;
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      border: 0.1rem solid #56a5eb;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #56a5eb;
+      background-color: white;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+      transform: translateY(-0.1rem);
+      transition: transform 150ms;
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RESPONSIVENESS FOR MOBILE DEVICES */
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 10px !important;
+      }
+
+      .text h2 {
+        font-size: 20px;
+      }
+
+      .text p {
+        font-size: 6.8px !important;
+      }
+
+      .img {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVENESS FOR TABLETS AND IPADS */
+    @media (max-width: 950px) {
+      .container {
+        width: 768px;
+        height: 2400px;
+      }
+
+      .header {
+        width: 755px;
+      }
+
+      .img {
+        width: 750px;
+      }
+
+      .text p {
+        font-size: 12px;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block title %}St. George{% endblock %} 
+
+{% block content %}
+  <div class="container">
+    <div class="header">
+      <div class="text">
+        <h1>St. George</h1>
+        <p>(3rd century AD-23 April 303)</p>
+        <p>
+          "In a time of universal deceit, telling the truth is a revolutionary
+          act."
+        </p>
+        <p class="quote-sayer">-St. George</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img
+          class="img"
+          src="{{ url_for('static', filename='img/stgeorge.jpg') }}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          St. George (3rd century AD-23 April 303) was a Christian of Cappadocian
+          Greek origins, who is accepted
+          <br />as a saint in Christianity. According to traditional rumours, he
+          was a soldier in the Roman Army. His <br />parents were Christians of
+          Greek origin. His father, Gerontius, was a Cappadocian serving in the
+          Roman <br />Army. His mother, Polychronia, was a Christian from the city
+          of Lod in Palestine. St. George was a soldier, <br />a member of the
+          Praetorian Guard for Roman Emperor Diocletian, who was sentenced to
+          death for refusing to <br />recant his Christian faith. He became one of
+          the most venerated saints and megalomartyrs in Christianity, <br />and
+          he has been seen especially as a military saint since the Crusades. In
+          hagiography, as one of the Fourteen <br />Holy Helpers and one of the
+          most prominent military saints, he is immortalized in the legend of St.
+          George <br />and the Dragon. England, Ethiopa, Georgia, Catalonia and
+          Aragon in Spain and several other nations, states, <br />cities,
+          universities, professions and organizations all claim St. George as
+          their patron saint.
+        </p>
+        <h2>Legend</h2>
+        <p>
+          Very little is known about George's life, but it is thought he was a
+          Roman officer of Greek descent
+          <br />from Cappadocia who was martyred in one of the pre-Constantinian
+          persecutions. Beyond this, early <br />sources give conflicting
+          information. There are two main versions of the legend, a Greek and a
+          Latin <br />version, which can both be traced to the 5th or 6th century.
+          The saint's veneration dates to the 5th <br />century with some
+          certainty, and possibly still to the 4th. The addition of the dragon
+          legend dates <br />to the 11th century. The earliest text which
+          preserves fragments of George's narrative is in a Greek
+          <br />hagiography which is identified by Hippolyte Delehaye of the
+          scholarly Bollandists to be a palimpsest <br />of the 5th century. An
+          earlier work by Eusebius, Church history, written in the 4th century,
+          contributed <br />to the legend but did not name George or provide
+          significant detail. The work of the Bollandists Daniel <br />Papebroch,
+          Jean Bolland, and Godfrey Henschen in the 17th century was one of the
+          first pieces of scholarly <br />research to establish the saint's
+          historicity, via their publications in
+          <em>Bibliotheca Hagiographica Graeca</em>.
+        </p>
+        <h2>George and the dragon</h2>
+        <p>
+          The legend of Saint George and the Dragon was first recorded in the 11th
+          century, in a Georgian source.
+          <br />It reached Catholic Europe in the 12th century. In the Golden
+          Legend, by 13th-century Archbishop of <br />Genoa Jacobus da Varagine,
+          George's death was at the hands of Dacian, and about the year 287. Saint
+          <br />George Killing the Dragon, 1434/35, by Bernat Martorell The
+          tradition tells that a fierce dragon was <br />causing panic at the city
+          of Silene, Libya, at the time George arrived there. In order to prevent
+          the <br />dragon from devastating people from the city, they gave two
+          sheep each day to the dragon, but when the <br />sheep were not enough
+          they were forced to sacrifice humans instead of the two sheep. The human
+          to be <br />sacrificed was elected by the city's own people and one time
+          the king's daughter was chosen to be sacrificed <br />but no one was
+          willing to take her place. George saved the girl by slaying the dragon
+          with a lance. The king <br />was so grateful that he offered him
+          treasures as a reward for saving his daughter's life, but George refused
+          <br />it and instead he gave these to the poor. The people of the city
+          were so amazed at what they had witnessed <br />that they became
+          Christians and were all baptized.
+        </p>
+        <h2>Veneration</h2>
+        <p>
+          A titular church built in Lydda during the reign of Constantine the
+          Great (reigned 306-337) was consecrated
+          <br />to "a man of the highest distinction", according to the church
+          history of Eusebius; the name of the titulus <br />"patron" was not
+          disclosed, but later he was asserted[by whom?] to have been George. The
+          veneration of George <br />spread from Syria Palaestina through Lebanon
+          to the rest of the Byzantine Empire - though the martyr is not
+          <br />mentioned in the Syriac Breviarium - and the region east of the
+          Black Sea. By the 5th century, the veneration <br />of George had
+          reached the Christian Western Roman Empire, as well: in 494, George was
+          canonized as a saint by <br />Pope Gelasius I, among those "whose names
+          are justly reverenced among men, but whose acts are known only to
+          <br />[God]."
+        </p>
+        <h2>Iconography</h2>
+        <p>
+          George is most commonly depicted in early icons, mosaics, and frescos
+          wearing armour contemporary with
+          <br />the depiction, executed in gilding and silver colour, intended to
+          identify him as a Roman soldier. <br />Particularly after the Fall of
+          Constantinople and George's association with the crusades, he is often
+          <br />portrayed mounted upon a white horse. Thus, a 2003 Vatican stamp
+          (issued on the anniversary of the Saint's <br />death) depicts an
+          armoured George atop a white horse, killing the dragon. George may also
+          be portrayed with <br />Saint Demetrius, another early soldier saint.
+          When the two saintly warriors are together and mounted upon
+          <br />horses, they may resemble earthly manifestations of the archangels
+          Michael and Gabriel. Eastern traditions <br />distinguish the two as
+          George rides a white horse and Demetrius a red horse (the red pigment
+          may appear black <br />if it has bituminized). George can also be
+          identified by his spearing a dragon, whereas Demetrius may be
+          <br />spearing a human figure, representing Maximian.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-links">
+    <div class="prev-next">
+      <a class="btn" href="/stanthony">
+        <h2>Prev.</h2>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="btn" href="/staidanlindisfarne">
+        <h2>Next</h2>
+      </a>
+    </div>
+    <a class="btn" href="/">
+      <h2>Back to Home Page</h2>
+    </a>
+  </div>
+{% endblock %}
