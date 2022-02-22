@@ -49,8 +49,9 @@ def feedback():
 
             server.login(sender, password)
             server.sendmail(sender, receiver, body)
+            server.quit()
             flash("Thank you for your feedback!")
         else:
-            flash("Invalid email", category='error')
+            flash("Invalid email", category="error")
 
     return render_template("feedback.html")
