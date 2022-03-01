@@ -10,7 +10,8 @@ I have used Bootstrap for some of the styles.
 I have made some mistakes with the numbering for each saint in commit messages.  
 The views.py contains the route for the home page and the other main pages,  
 while the pages.py contains the routes for all the saints.
-I will probably dockerize this application later on
+I will probably dockerize this application later on.
+This Website will be deployed soon.
 
 ## Pictures
 
