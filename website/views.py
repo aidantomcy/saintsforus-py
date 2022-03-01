@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, render_template, request
+from flask import Blueprint, flash, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from os import getenv
 import smtplib
@@ -6,7 +6,9 @@ import re
 
 
 load_dotenv()
-views = Blueprint("views", __name__, template_folder="templates")
+views = Blueprint(
+    "views", __name__, template_folder="templates", static_folder="static"
+)
 
 
 def check_email(email):
@@ -21,6 +23,11 @@ def check_email(email):
 @views.route("/home")
 def index():
     return render_template("index.html")
+
+
+@views.route("/robots.txt")
+def robots_txt():
+    return send_from_directory(views.static_folder, request.path[1:])
 
 
 @views.route("/feedback", methods=["GET", "POST"])
