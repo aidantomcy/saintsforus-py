@@ -40,7 +40,6 @@ def feedback():
         sender = "info.saintsforus@gmail.com"
         receiver = "aidantomcy@gmail.com"
         password = getenv("EMAIL_PASSWORD")
-        subject = "New form submission in Saints for Us website"
         body = f"""
     There is a new form submission in the website, here are the details:
 
