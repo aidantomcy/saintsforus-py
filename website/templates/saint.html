@@ -95,10 +95,9 @@
   <body>
     {% block content %}{% endblock %}
 
-    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
     <script>
-      $(document).bind("contextmenu", () => {
-        return false;
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
       });
     </script>
   </body>
