@@ -37,8 +37,6 @@ def feedback():
         user_email = request.form.get("email")
         message = request.form.get("message")
 
-        sender = "info.saintsforus@gmail.com"
-        receiver = "aidantomcy@gmail.com"
         password = getenv("EMAIL_PASSWORD")
         body = f"""
     There is a new form submission in the website, here are the details:
@@ -53,7 +51,9 @@ def feedback():
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
 
+            sender = "info.saintsforus@gmail.com"
             server.login(sender, password)
+            receiver = "aidantomcy@gmail.com"
             server.sendmail(sender, receiver, body)
             server.quit()
             flash("Thank you for your feedback!")
