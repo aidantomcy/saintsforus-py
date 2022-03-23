@@ -46,8 +46,7 @@ def feedback():
     Message: {message}
     """
 
-        is_valid_email = check_email(user_email)
-        if is_valid_email:
+        if is_valid_email := check_email(user_email):
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
 
