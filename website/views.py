@@ -53,8 +53,16 @@ def feedback():
             sender = "info.saintsforus@gmail.com"
             server.login(sender, password)
             receiver = "aidantomcy@gmail.com"
-            server.sendmail(sender, receiver, body)
-            server.quit()
+
+            try:
+                server.sendmail(sender, receiver, body)
+            except smtplib.SMTPDataError:
+                flash(
+                    "Your message could not be sent. Please try again later.",
+                    category="error",
+                )
+            finally:
+                server.quit()
             flash("Thank you for your feedback!")
         else:
             flash("Invalid email", category="error")
