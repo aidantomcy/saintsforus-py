@@ -147,23 +147,27 @@ a {
   }
 
   .text p {
-    font-size: 6.8px !important;
+    font-size: 8px !important;
   }
 
   .img {
     display: none;
   }
+
+  .quote-sayer {
+    display: none;
+  }
 }
 
 /* RESPONSIVENESS FOR TABLETS AND IPADS */
-@media (max-width: 950px) {
+@media (max-width: 1210px) {
   .container {
     width: 768px;
     height: 2400px;
   }
 
   .header {
-    width: 755px;
+    width: 100%;
   }
 
   .img {
@@ -171,6 +175,10 @@ a {
   }
 
   .text p {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .quote-sayer {
+    display: none;
   }
 }
