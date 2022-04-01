@@ -113,6 +113,13 @@ a {
   transition: transform 150ms;
 }
 
+.prev-next {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* RESPONSIVENESS FOR MOBILE DEVICES */
 @media (max-width: 500px) {
   .header h1 {
