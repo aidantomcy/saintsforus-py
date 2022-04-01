@@ -121,13 +121,25 @@ a {
 }
 
 /* RESPONSIVENESS FOR MOBILE DEVICES */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+
+  .header {
+    height: 150px;
+  }
+
   .header h1 {
     font-size: 40px;
   }
 
   .header p {
-    font-size: 10px !important;
+    font-size: 40px !important;
+  }
+
+  .text {
+    margin-left: 10px;
   }
 
   .text h2 {
