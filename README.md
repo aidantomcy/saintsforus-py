@@ -13,6 +13,19 @@ while the pages.py contains the routes for all the saints.
 I will probably dockerize this application later on.  
 This Website will be deployed soon.
 
+## Running Locally
+1. Create a .env file in the website with the following keys:  
+   * SECRET_KEY: A secret key for the application.
+   * EMAIL_SENDER: An email id to send a mail in the contact form page.
+   * EMAIL_PASSWORD: The password for the email sender.
+   * EMAIL_RECEIVER: A receiver email to get the mail sent by the email sender.
+2. Run the server:  
+   ```
+   $ python main.py
+   ```
+3. Open your browser and head to `http://localhost:5000`
+
+
 ## Contact
 If you have any feedback, comments or criticism, please mail your contents to info.saintsforus@gmail.com
 
