@@ -14,7 +14,7 @@ I will probably dockerize this application later on.
 This Website will be deployed soon.
 
 ## Running Locally
-1. Create a .env file in the website with the following keys:  
+1. Create a .env file in the website directory with the following keys:  
    * SECRET_KEY: A secret key for the application.
    * EMAIL_SENDER: An email id to send a mail in the contact form page.
    * EMAIL_PASSWORD: The password for the email sender.
